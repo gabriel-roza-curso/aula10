@@ -1,3 +1,4 @@
+import random
 def somar(m, n):
     return m + n
 
@@ -18,8 +19,8 @@ def dividir(m, n):
 
 
 escolha = input('Escolha a operação: (soma, subtração, multiplicação ou divisão): ')
-num1 = int(input('Escolha o primeiro número: '))
-num2 = int(input('Escolha o segundo número: '))
+num1 = int(random.randint(1, 100))
+num2 = int(random.randint(1, 100))
 
 if escolha == 'soma':
     print('Resultado: ', somar(num1, num2))
