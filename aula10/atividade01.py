@@ -18,17 +18,23 @@ def dividir(m, n):
         return "Erro: divisão por zero!"
 
 
-escolha = input('Escolha a operação: (soma, subtração, multiplicação ou divisão): ')
-num1 = int(random.randint(1, 100))
-num2 = int(random.randint(1, 100))
+def calculadora():
+    print('Calculadora')
+    print('operações: 1 - soma, 2 - subtração, 3 - multiplicação, 4 - divisão')
+    escolha = input('Escolha a operação: ')
+    num1 = int(random.randint(1, 100))
+    num2 = int(random.randint(1, 100))
 
-if escolha == 'soma':
-    print('Resultado: ', somar(num1, num2))
-elif escolha == 'subtração':
-    print('Resuldado: ', subtrair(num1, num2))
-elif escolha == 'multiplicação':
-    print('Resultado: ', multiplicar(num1, num2))
-elif escolha == 'divisão':
-    print('Resultado: ', dividir(num1, num2))
-else:
-    print('Operação inválida')
+    print(num1, num2)
+    match escolha:
+        case '1':
+            print('Resultado:', somar(num1, num2))
+        case '2':
+            print('Resultado:', subtrair(num1, num2))
+        case '3':
+            print('Resultado:', multiplicar(num1, num2))
+        case '4':
+            print('Resultado:', dividir(num1, num2))
+
+
+calculadora()
